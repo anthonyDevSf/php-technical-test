@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Liste des sorties</h1>
+
+    <table id="example" class="table table-striped table-bordered" style="width: 100%">
+        <thead>
+        <tr>
+            <th>Utilisateur</th>
+            <th>Date de départ</th>
+            <th>Distance (km)</th>
+            <th>Durée (h:min)</th>
+            <th>Vitesse Moyenne (km/h)</th>
+            <th>Allure Moyenne (min/km)</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for running in runnings %}
+            <tr>
+                <td>{{ running.user.email }}</td>
+                <td>{{ running.start|date('Y-m-d H:i') }}</td>
+                <td>{{ running.distance }}</td>
+                <td>{{ running.duration|date('H:i') }}</td>
+                <td>{{ running.speed }}</td>
+                <td>{{ running.pace }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
