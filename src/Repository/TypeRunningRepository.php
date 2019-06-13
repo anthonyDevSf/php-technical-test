@@ -16,7 +16,7 @@ class TypeRunningRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, RunningType::class);
+        parent::__construct($registry, TypeRunning::class);
     }
 
     // /**

@@ -9,3 +9,11 @@ app_login:
 app_logout:
     path: /logout
     controller: App\Controller\SecurityController::logout
+
+app_running_create:
+    path: /running/create
+    controller: App\Controller\RunningController::createOrUpdate
+
+app_running_update:
+    path: /running/update/{running}
+    controller: App\Controller\RunningController::createOrUpdate

@@ -18,7 +18,7 @@
                 <a class="navbar-brand" href="{{ path('app_home') }}">Run App</a>
                 <div class="collapse navbar-collapse justify-content-between" id="navbar">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="#">Add a course</a>
+                        <a class="nav-item nav-link" href="{{ path('app_running_create') }}">Add a course</a>
                     </div>
                     <div class="navbar-nav">
                         {% if not app.user %}
