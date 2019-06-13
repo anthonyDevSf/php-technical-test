@@ -12,6 +12,7 @@
             <th>Durée (h:min)</th>
             <th>Vitesse Moyenne (km/h)</th>
             <th>Allure Moyenne (min/km)</th>
+            <th>Gestion</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,14 @@
                 <td>{{ running.duration|date('H:i') }}</td>
                 <td>{{ running.speed }}</td>
                 <td>{{ running.pace }}</td>
+                <td><a href="{{ path('app_running_update', {'running': running.id }) }}">
+                        modifier
+                    </a>
+                    <br />
+                    <a href="{{ path('app_running_delete', {'running': running.id }) }}">
+                        supprimer
+                    </a>
+                </td>
             </tr>
         {% endfor %}
         </tbody>

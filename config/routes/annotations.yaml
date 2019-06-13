@@ -17,3 +17,7 @@ app_running_create:
 app_running_update:
     path: /running/update/{running}
     controller: App\Controller\RunningController::createOrUpdate
+
+app_running_delete:
+    path: /running/delete/{running}
+    controller: App\Controller\RunningController::delete
