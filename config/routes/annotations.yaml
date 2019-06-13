@@ -21,3 +21,7 @@ app_running_update:
 app_running_delete:
     path: /running/delete/{running}
     controller: App\Controller\RunningController::delete
+
+app_registration:
+    path: /registration
+    controller: App\Controller\RegistrationController::registration

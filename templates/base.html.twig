@@ -23,7 +23,7 @@
                     <div class="navbar-nav">
                         {% if not app.user %}
                             <a class="nav-item nav-link" href="{{ path('app_login') }}">Login</a>
-                            <a class="nav-item nav-link" href="#">Register</a>
+                            <a class="nav-item nav-link" href="{{ path('app_registration') }}">Register</a>
                         {% else %}
                             <a class="nav-item nav-link" href="{{ path('app_logout') }}">Logout</a>
                         {% endif %}

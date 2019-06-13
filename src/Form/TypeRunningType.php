@@ -2,11 +2,12 @@
 
 namespace App\Form;
 
+use App\Entity\TypeRunning;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class TypeRunning extends AbstractType
+class TypeRunningType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
@@ -16,7 +17,7 @@ class TypeRunning extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => \App\Entity\TypeRunning::class,
+            'data_class' => TypeRunning::class,
         ]);
     }
 }
