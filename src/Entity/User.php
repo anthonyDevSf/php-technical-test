@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
+ * @ApiResource
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface
@@ -26,6 +28,10 @@ class User implements UserInterface
      * @ORM\Column(type="json")
      */
     private $roles = [];
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Running", mappedBy="user")
+     */
+    private $runnings;
 
     /**
      * @var string The hashed password
@@ -92,6 +98,22 @@ class User implements UserInterface
         $this->password = $password;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRunnings()
+    {
+        return $this->runnings;
+    }
+
+    /**
+     * @param mixed $runnings
+     */
+    public function setRunnings($runnings): void
+    {
+        $this->runnings = $runnings;
     }
 
     /**

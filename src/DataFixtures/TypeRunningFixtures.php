@@ -10,7 +10,7 @@ class TypeRunningFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        $types = ['entraînement', 'course', 'loisir', 'préparation avancée'];
+        $types = ['training', 'running', 'spare-time', 'advanced preparation'];
 
         foreach ($types as $type) {
             $runningType = new TypeRunning();
