@@ -29,14 +29,22 @@
                     <td>{{ running.duration|date('H:i') }}</td>
                     <td>{{ running.speed }}</td>
                     <td>{{ running.pace }}</td>
-                    <td><a href="{{ path('app_running_update', {'running': running.id }) }}">
-                            update
-                        </a>
-                        <br />
-                        <a href="{{ path('app_running_delete', {'running': running.id }) }}">
-                            delete
-                        </a>
-                    </td>
+                    {% if app.user is defined and app.user is not null %}
+                        {% if app.user.email == running.user.email %}
+                            <td><a href="{{ path('app_running_update', {'running': running.id }) }}">
+                                    update
+                                </a>
+                                <br />
+                                <a href="{{ path('app_running_delete', {'running': running.id }) }}">
+                                    delete
+                                </a>
+                            </td>
+                        {% else %}
+                            <td>You can just consult </td>
+                        {% endif %}
+                    {% else %}
+                        <td>You can just consult </td>
+                    {% endif %}
                 </tr>
             {% endfor %}
         {% endif %}
