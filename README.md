@@ -4,6 +4,8 @@
 
 ### Tâche
 
+Temps réalisé : 3h45.
+
 Le sujet de base est simple : il faut créer un site permettant la gestion de sorties de courses à pied.
 
 Une sortie de course à pied est définie comme ceci :
@@ -22,15 +24,16 @@ Lors de la création ou modification d'une sortie, il faut calculer et enregistr
 Le site doit être sécurisé. Une authentification via http basic auth sur un provider in memory est amplement suffisante. 
 
 Une fois l'utilisateur connecté, différents **écrans** doivent permettre de :
-* lister les sorties (affichage des principales informations dont la vitesse moyenne et l'allure moyenne)
-* ajouter / modifier une sortie
-* supprimer une sortie
+* lister les sorties (affichage des principales informations dont la vitesse moyenne et l'allure moyenne) => Done
+* ajouter / modifier une sortie => Done
+* supprimer une sortie => Done
 
 Une **API** doit être mise à disposition. Cette **API ne doit pas être sécurisée**. Par le biais de cette API, il doit être possible de :
-* lister toutes les sorties
-* lister les sorties d'un utilisateur
-* récupérer le détail d'une sortie
+* lister toutes les sorties => Done
+* lister les sorties d'un utilisateur => Not Done
+* récupérer le détail d'une sortie => Done
 
+Utilisation d'API Platform
 
 ### Les Pré-requis
 
